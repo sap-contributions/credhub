@@ -57,6 +57,8 @@ generate_server_ca() {
 [v3_cert]
 extendedKeyUsage = serverAuth
 basicConstraints = critical,CA:TRUE
+keyUsage = critical, digitalSignature, cRLSign, keyCertSign
+
 EOF
     openssl req \
       -x509 \
